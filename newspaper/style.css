@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Pirata One", system-ui;
+  src: url(https://fonts.googleapis.com/css2?family=Pirata+One&display=swap); /* url of the font */
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-family: myFont; /* use font */
+}
 body {
   max-width: 1080px;
   margin: 0 auto;
@@ -43,8 +53,8 @@ h3 {
 .col {
   display: flex;
   flex-direction: column;
-  flex: 1;
   min-width: 0;
+  align-items: center;
 }
 
 /* Column widths: bigger flex value = more room. */
@@ -61,22 +71,18 @@ h3 {
 }
 
 .divider {
-  border-left: 1px solid;
-  padding-left: 20px;
+  border-left: 2px solid;
+  padding-left: 30px;
 }
 
 .rule {
-  border-top: 2px solid;
-  border-bottom: 2px solid;
-  padding: 4px 0;
+  border-top: 1px solid;
+  padding: 4px ;
   margin: 0 0 12px;
 }
 
 .box {
-  border: 1px solid;
-  padding: 10px;
-  margin-bottom: 16px;
-  font-size: 14px;
+  text-align: center;
 }
 
 .bar {
@@ -88,15 +94,15 @@ h3 {
 .masthead {
   text-align: center;
   margin: 16px 0;
+  font-family:'Franklin Gothic Bold' sans-serif;
 }
 
 .nameplate {
-  font-size: 46px;
+  font-size: 55px;
 }
 
 .deck {
-  font-size: 15px;
-  font-style: italic;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -119,14 +125,36 @@ h3 {
   }
 }
 
-  .divider {
-    border-left: 0;
-    padding-left: 0;
-    border-top: 1px solid;
-    padding-top: 16px;
-}
 .col.wide {
   border-right:10px;
   padding-right:15px solid;
   margin-right: 20px;
+}
+.paper {
+    background: #fff;
+    max-width: 800px;
+    margin: 10px auto;
+    height: 1300px;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+body {
+    margin: 0;
+    background: url(https://www.oldbookillustrations.com/site/assets/high-res/1867/china-bottle-2-1600.jpg) center;
+    background-repeat:repeat;
+  }
+.clark {
+  border: 1px solid;
+  margin-top: 20%;
+  margin-bottom:20%;
+}
+.endborder {
+  border: 1px solid;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 20%;
+  display:flex;
+  width: 500px;
+  align-items: baseline;
+  justify-content: center;
 }
