@@ -6,7 +6,7 @@
 }
 
 p {
-  font-family: myFont; /* use font */
+  font-family: 'Source Sans Pro', sans-serif;
 }
 body {
   max-width: 1080px;
@@ -19,7 +19,7 @@ body {
 p {
   margin: 0 0 px;
   font-size: 13px;
-  text-align: left;
+  text-align: center;
 }
 
 h1 {
@@ -30,14 +30,14 @@ h1 {
 
 h2 {
   margin: 0 0 8px;
-  font-size: 22px;
+  font-size: 25px;
   line-height: 1.1;
 }
 
 h3 {
   margin: 0 0 6px;
   font-size: 15px;
-  text-align: left;
+  text-align: center;
 }
 
 .lead {
@@ -48,12 +48,14 @@ h3 {
 .row {
   display: flex;
   gap: 20px;
+  height: 1020px;
+  border-bottom: 1.5px solid;
 }
 
 .col {
   display: flex;
   flex-direction: column;
-  min-width: 0;
+  min-width: 20px;
   align-items: center;
 }
 
@@ -71,12 +73,11 @@ h3 {
 }
 
 .divider {
-  border-left: 2px solid;
+  border-left: 1.5px solid;
   padding-left: 30px;
 }
 
 .rule {
-  border-top: 1.5px solid;
   padding: 5px ;
   margin: 10px 0 12px;
 }
@@ -131,7 +132,7 @@ h3 {
   margin-right: 20px;
 }
 .paper {
-    background:linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.8)),
+    background:linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
         url("beige.jpg");
     max-width: 800px;
     margin: 10px auto;
@@ -143,6 +144,7 @@ body {
     margin: 0;
     background: url(https://www.oldbookillustrations.com/site/assets/high-res/1867/china-bottle-2-1600.jpg) center;
     background-repeat:repeat;
+    background-attachment: fixed;
   }
 .clark {
   border: 1px solid;
@@ -150,14 +152,12 @@ body {
   margin-bottom:20%;
 }
 .endborder {
-  border: 1px solid;
-  margin-top: 2%;
-  margin-left: 10%;
-  margin-right: 20%;
+  margin-top: 5%;
+  margin-left: 4%;
   display:flex;
-  width: 500px;
+  width: 650px;
   align-items: baseline;
-  justify-content: center;
+  justify-items: center;
 }
 .tulip-image {
   width: 120px;
@@ -168,7 +168,7 @@ body {
   shape-outside: square(50%);
   shape-margin: 1rem;
   margin-right: 1rem;
-  margin-left: -40px;
+  margin-left: -50px;
 }
 .red-flower {
   width: 120px;
@@ -176,9 +176,9 @@ body {
   padding: 5px;
   object-fit: cover;
   float: right;
-  shape-outside: square(50%);
+  shape-outside: circle (20%);
   shape-margin: 1rem;
-  margin-right: -50px;
+  margin-right: -70px;
 }
 .poppy {
   width: 200px;
@@ -186,22 +186,21 @@ body {
   padding: 1px;
   object-fit: cover;
   float: right;
-  shape-outside: square(10%);
-  shape-margin: 1rem;
-  margin-right: -90px;
+  shape-outside: circle (10%);
+  margin-right: -100px;
 }
 .middlecol {
   margin-top: 30px;
 }
 .rose {
-  width: 200px;
+  width: 150px;
   height: 150px;
   padding: 1px;
   object-fit: cover;
   float: right;
   shape-outside: square(10%);
   shape-margin: 1rem;
-  margin-right: -90px; 
+  margin-right: -100px; 
 }
 .cat {
   shape-outside: polygon(nonzero, -0.4% 20.3%, 5.2% 19.25%, 22.2% 37.8%, 60.2% 55.35%, 79.8% 70.5%, 64.2% 81.4%, 41.4% 81.6%, 30.8% 91.25%, 28% 99.8%, 0% 99.55%);
@@ -210,5 +209,141 @@ body {
   float: right;
   margin-top: 5px;
   margin-right: 15px;
+}
+.logo-heading {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.85;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: fit-content;
+}
 
+.logo-top {
+  font-size: 40px;
+}
+
+.logo-bottom {
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.logo-small {
+  font-size: 16px;
+}
+
+.logo-big {
+  font-size: 40px;
+}
+@keyframes breathingSway {
+  0% {
+    transform: rotate(-1deg) scale(1);
+  }
+  25% {
+    transform: rotate(0.5deg) scale(1.015);
+  }
+  50% {
+    transform: rotate(1deg) scale(1.03);
+  }
+  75% {
+    transform: rotate(0.5deg) scale(1.015);
+  }
+  100% {
+    transform: rotate(-1deg) scale(1);
+  }
+}
+
+.rose,
+.poppy,
+.tulip-image,
+.red-flower {
+  animation: breathingSway 6s ease-in-out infinite;
+  transform-origin: bottom center;
+  will-change: transform;
+}
+.vol-bar {
+  border-top: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+  padding: 5px 0;
+  margin: 10px 0 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.footer {
+  width:90px;
+  height: 90px;
+  display: block;
+  margin:0 auto
+}
+.wind-gust {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* lets clicks pass through */
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.wind-streak {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 20%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.05) 80%,
+    transparent 100%
+  );
+  filter: blur(8px);
+  transform: skewX(-20deg);
+  animation: gust 1.4s ease-in-out forwards;
+}
+
+.streak-2 {
+  animation-delay: 0.15s;
+  top: 10%;
+  height: 90%;
+}
+
+.streak-3 {
+  animation-delay: 0.3s;
+  top: -5%;
+  height: 110%;
+  opacity: 0.7;
+}
+
+@keyframes gust {
+  0% {
+    left: -60%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
+.nameplate {
+  font-family: 'Pirata One', serif;
+  font-weight: 700;
+}
+.footer {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer:hover {
+  transform: scale(1.15);
+  filter: brightness(1.1);
 }
